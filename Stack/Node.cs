@@ -16,7 +16,7 @@ namespace Stack
 
         public Node(T? value)
         {
-            Data = value;
+            this.Data = value;
             Next = null;
             Prev = null;
         }

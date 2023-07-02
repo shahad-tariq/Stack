@@ -7,7 +7,7 @@ namespace Stack
     class Stack<T>
     {
         private LinkedList<T> stackList = new LinkedList<T>();
-
+        
 
         //Q1 LIFO
         public void Push(LinkedListNode<T> newNode)
@@ -40,7 +40,7 @@ namespace Stack
         //Q4
         public void Reverse()
         {
-            Extension.Reverse(stackList);
+            LinkedListExtension.Reverse(stackList);
         }
 
 
@@ -142,7 +142,20 @@ namespace Stack
 
 
         //Q17
+        public void MergeStacks(Stack<T> stack1, Stack<T> stack2)
+        {
+            stackList = LinkedListExtension.Merge<T>(
+                stackList , 
+                stack1.stackList,
+                stack2.stackList);
+        }
 
+
+        //Q18
+        public bool IsSubsetStacks(Stack<T> stack2)
+        {
+            return LinkedListExtension.IsSubset<T>(stackList, stack2.stackList);
+        }
 
 
 
