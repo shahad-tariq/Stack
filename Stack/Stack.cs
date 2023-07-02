@@ -40,7 +40,7 @@ namespace Stack
         //Q4
         public void Reverse()
         {
-            LinkedListExtension.Reverse(stackList);
+            stackList = LinkedListExtension.Reverse(stackList);
         }
 
 
@@ -145,7 +145,6 @@ namespace Stack
         public void MergeStacks(Stack<T> stack1, Stack<T> stack2)
         {
             stackList = LinkedListExtension.Merge<T>(
-                stackList , 
                 stack1.stackList,
                 stack2.stackList);
         }

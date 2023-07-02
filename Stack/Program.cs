@@ -32,6 +32,7 @@ namespace Stack
             stack1.Display();
 
             Console.WriteLine();
+            Console.WriteLine("Reverse: ");
             stack1.Reverse();
             stack1.Display();
 
