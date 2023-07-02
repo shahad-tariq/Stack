@@ -29,10 +29,8 @@ namespace Stack
 
             hash1.UnionWith(hash2);
 
-            foreach (T item in hash1)
-            {
-                mergeLinked.AddLast(item);
-            }
+            mergeLinked = new LinkedList<T>(hash1);
+
 
             return mergeLinked;
         }
